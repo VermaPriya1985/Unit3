@@ -2,6 +2,28 @@
 using System.Collections.Generic;
 namespace Unit3examples
 {
+    public class Movie 
+    {
+ 
+        public string Title{get;set;}
+        public string Director{get;set;}
+        public int Year{get;set;}
+
+        public void MovieRate()
+        {
+            // Code to track movie rate
+        }
+        public void PrintDetails()
+        {
+
+           Console.WriteLine(Title);
+           Console.WriteLine(Director);
+           Console.WriteLine(Year);
+          
+        }
+    }
+}
+
     // class Movie
     // {
     //     static void Run(string[] args)
@@ -56,8 +78,6 @@ namespace Unit3examples
 
 
     // Create class, class is template or blue print 
-    public class Movie 
-    {
         // Constructor, allows to build movie, assign values to different data members like title 
         // its very similar to function. 
         //Constructor is a method allows to set data members like title, year
@@ -77,14 +97,11 @@ namespace Unit3examples
     // outside of the movie class 
     
     // In C#, Instead of getmovietitle and settitle, we have 2 properties set and get
-        // you can define your own get and set, so we dnt need define above data members
+    // you can define your own get and set, so we dnt need define above data members
 
     // public string Title{get; private set} 
-    public string Title{get;set;}
-    public string Director{get;set;}
-    public int Year{get;set;}
-
-    /* public string GetMovieTitle()
+    
+        /* public string GetMovieTitle()
     {
         return title;
     }
@@ -94,18 +111,4 @@ namespace Unit3examples
         title = newtitle;
     } */
 
-    public void PrintDetails()
-    {
 
-           /* Console.WriteLine(title);
-            Console.WriteLine(director);
-            Console.WriteLine(year);
-         */ 
-           Console.WriteLine(Title);
-           Console.WriteLine(Director);
-           Console.WriteLine(Year);
-          
-    }
-
-    }
-}
