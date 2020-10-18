@@ -5,7 +5,7 @@ namespace Unit3examples
     class Animal
     {
         // Animal Properties
-        public long Id{get;set;}
+        public long AnimalId{get;set;}
         public string Name{get;set;}
         public string Type{get;set;}
         public string Breed{get;set;}
@@ -15,27 +15,29 @@ namespace Unit3examples
         public bool IsAdopted{get;set;}
 
         // Adoption Properties
+        public long AdoptionId{get;set;}
         public string AdoptionName{get;set;}
-        public float Age{get;set;}
-        public string AdoptionMob{get;set;}
-        public string Address{get;set;}
+        public float AdoptionAge{get;set;}
+        public int AdoptionMob{get;set;}
+        public string AdoptionAddress{get;set;}
         
         // Methods
 
         // Add New Animal
-        public void AddAnimal()
+        public void AddAnimal(string Name, string Type, string breed,
+        string Location, double Latitude, double Longitude)
         {
             // Code to add new Animal
             Console.WriteLine("New Animal added successfully");
-        }
+        }       
         // Update Animal
-        public void UpdateAnimal()
+        public void UpdateAnimal(long AnimalId)
         {
             // Code to edit Animal
             Console.WriteLine("Animal updated successfully");
         }
         // Delete Animal
-        public void DeleteAnimal()
+        public void DeleteAnimal(long AnimalId)
         {
             // Code to delete Animal
             Console.WriteLine("Animal deleted successfully");
@@ -51,19 +53,20 @@ namespace Unit3examples
             Console.WriteLine($"Longitude of Animal is: {Longitude}\n");
         }
         // Add New Adoption 
-        public void AddAdoption()
+        public void AddAdoption(string AdoptionName, string AdoptionAge, 
+        int AdoptionMob,string AdoptionAddress)
         {
             // Code to add new Adoption
             Console.WriteLine("New Adoption added successfully");
         }
         // Update Adoption 
-        public void UpdateAdoption()
+        public void UpdateAdoption(long AdoptionId)
         {
             // Code to add new Adoption
             Console.WriteLine("Adoption updated successfully");
         }
         // Delete Adoption 
-        public void DeleteAdoption()
+        public void DeleteAdoption(long AdoptionId)
         {
             // Code to add new Adoption
             Console.WriteLine("Adoption deleted successfully");
@@ -77,23 +80,23 @@ namespace Unit3examples
            // Console.WriteLine($"Weather is: {str}\n");
         }
         // Animal is adopted or not, either Yes or No
-        public void IsAnimalAdopted()
+        public void IsAnimalAdopted(long AnimalId)
         {
            Console.WriteLine($"Is Animal adopted: {IsAdopted}\n");
         }
         // Animal Allocated to Adoption 
-        public void BindAnimalToAdopt()
+        public void BindAnimalToAdopt(long AnimalId, long AdoptionId)
         {
            Console.WriteLine($"This Animal adopted to {AdoptionName}\n");
         }
         // Validate Adoption Age, should be greater than 18  
-        public void ValidateAdoptionAge()
+        public void ValidateAdoptionAge(long AdoptionId)
         {
            // Code to validate adoption age
            Console.WriteLine("Age should be greater than 18");
         }
         // Validate Mobile No, should be unique
-        public void ValidateMobileNo()
+        public void ValidateMobileNo(long AdoptionId)
         {
            // Code to validate adoption mobile
            Console.WriteLine("Mobile Number should be unique");
