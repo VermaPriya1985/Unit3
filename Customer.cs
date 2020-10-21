@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace Unit3examples
+namespace Unit3examples 
 {
-//    class Customer
+ //    class Customer
  //   {
         //static void Main(string[] args)
         //{   
@@ -12,7 +12,7 @@ namespace Unit3examples
             // c1.FirstName = "Priya";
             // c1.LastName = "verma";
             // c1.PrintGreeting();
-
+            
             // 2nd method
             // Customer c1 = new Customer()
             // {
@@ -53,25 +53,27 @@ namespace Unit3examples
     public long Id{get;set;}
     public DateTime Dob{get;set;}
     public string Email{get;set;}
-    public int Age { get
+    public int Age 
+    { 
+    get
     {
-                 DateTime currentDate = DateTime.Now;
+         DateTime currentDate = DateTime.Now;
          int age = currentDate.Year - Dob.Year;
            if (currentDate.DayOfYear < Dob.DayOfYear) {
                     age--;
                 }
 
-         return age;
-
+        return age;
     }
-     }
+    }
     // print greeting
     public void PrintGreeting()
     {
         Console.WriteLine($"Hello {FirstName} {LastName}!");
         // string str = "welcome to: " + name;
         // return  str;
-   }      
+      
+    }      
     // send mail
     public void SendMail(string subject, string bodyText)
     {

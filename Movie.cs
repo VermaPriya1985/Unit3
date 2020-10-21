@@ -8,7 +8,7 @@ namespace Unit3examples
         public string Title{get;set;}
         public string Director{get;set;}
         public int Year{get;set;}
-
+        // Code to rate movie
         public void MovieRate()
         {
             // Code to track movie rate

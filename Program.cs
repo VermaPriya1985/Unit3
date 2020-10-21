@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+// using ComITLibrary;
+using PasswordGenerator;
 namespace Unit3examples
 {
     class Program
     {
         static void Main(string[] args)
         {   
+
+            var pwd = new Password();
+            string generatepwd = pwd.Next();
+            Console.WriteLine("The Password is: " + generatepwd);
+
             // Movie mymovie = new Movie("Jurassic Park","ABC",1993);
            
             /* Movie mymovie = new Movie();
@@ -13,7 +20,7 @@ namespace Unit3examples
             mymovie.Director = "XYZ";
             mymovie.Year = 1993;
             */
-
+            
             //  2nd method to declare movie object
             Movie mymovie = new Movie(){
                 Title = "ABCD",
@@ -162,7 +169,8 @@ namespace Unit3examples
     }
 */
 // Library
-public class LibraryPatron {
+/* public class LibraryPatron 
+{
         // Constructor
         public LibraryPatron(int patronId) {
             PatronId = patronId;
@@ -219,8 +227,6 @@ public class LibraryPatron {
             Console.WriteLine($"Books out: {BooksCheckedOut}/5");
             Console.WriteLine($"Fees: ${FinesOwing.ToString("N2")}");
             Console.WriteLine("-----------------\n");
-        }
-    }
-
-
+         }
+    } */ 
 }
