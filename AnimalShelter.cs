@@ -5,6 +5,7 @@ namespace Unit3examples
     class Animal
     {
         // Animal Properties
+        // also species, intakedate, sex, bool spayedneutered property
         public long AnimalId{get;set;}
         public string Name{get;set;}
         public string Type{get;set;}

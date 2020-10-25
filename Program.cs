@@ -9,6 +9,32 @@ namespace Unit3examples
         static void Main(string[] args)
         {   
 
+            var somemoview = new Movie("ABC","ABC Director",1990);
+
+            try
+            {
+            somemoview.AddRating(1);
+            somemoview.AddRating(4);
+            somemoview.AddRating(5);
+            somemoview.AddRating(4);
+
+            }
+            
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+
+            // double avg = somemoview.GetAverageRating();
+            double avg = somemoview.AverageRating;
+            
+            Console.WriteLine("Rating is: " + avg);
+            Movie.Greeting();
+
+            int f =4;
+        
+
             var pwd = new Password();
             string generatepwd = pwd.Next();
             Console.WriteLine("The Password is: " + generatepwd);
@@ -22,7 +48,7 @@ namespace Unit3examples
             */
             
             //  2nd method to declare movie object
-            Movie mymovie = new Movie(){
+            /* Movie mymovie = new Movie(){
                 Title = "ABCD",
                 Director = "XYZ",
                 Year = 1993
@@ -30,6 +56,7 @@ namespace Unit3examples
 
             Console.WriteLine(mymovie.Title);
             mymovie.PrintDetails();
+            */
 
             //  mymovie.GetMovieTitle();
 

@@ -4,15 +4,75 @@ namespace Unit3examples
 {
     public class Movie 
     {
- 
+        // constructor initialize all of data members
+        public Movie(string title, string director, int year) 
+        {
+            // list of ratings will be null, if constructor is not created
+            // title, director etc is empty string 
+            Title = title;
+            Director=director;
+            Year=year;
+            // initialize list as empty list else get NULL exception
+            _ratings=new List<int>();
+            Id=Guid.NewGuid();
+        } 
+
+        public Guid Id{get; private set;}
         public string Title{get;set;}
         public string Director{get;set;}
         public int Year{get;set;}
+
+        // Collection of Ratings, make it private field with lower case
+        // public List<int> Ratings {get;private set}
+        private List<int> _ratings;
+
         // Code to rate movie
-        public void MovieRate()
+        /* public void MovieRate()
         {
             // Code to track movie rate
+        } */
+
+         // Property approach to average rating
+        public double AverageRating { 
+            get {
+                int sum = 0;
+
+                for (int i = 0; i < _ratings.Count; i++) {
+                    sum += _ratings[i];
+                }
+
+                double average = (double)sum / (double)_ratings.Count;
+                return Math.Round(average, 1);
+            }
         }
+
+        public void AddRating(int ratingToAdd)
+        {
+            if(ratingToAdd>=1 && ratingToAdd<=5)
+            {
+            Console.WriteLine($"Add Rating: {ratingToAdd}");
+            _ratings.Add(ratingToAdd);
+            }
+            else
+            {
+                throw new Exception("Invalid Rating");
+                // Console.WriteLine("Invalid Rating");
+            }
+        }
+
+        public double GetAverageRating()
+        {
+                int sum =0;
+                for(int i=0;i<_ratings.Count;i++)
+                {
+                    sum += _ratings[i];
+                }
+                double average = (double)sum / (double)_ratings.Count;
+                return Math.Round(average, 1);
+                // return average;
+
+        }
+
         public void PrintDetails()
         {
 
@@ -21,6 +81,14 @@ namespace Unit3examples
            Console.WriteLine(Year);
           
         }
+
+        // Static method, it does not associated with any one particular movie
+     
+        public static void Greeting()
+        {
+            Console.WriteLine("Hello World");
+            // _ratings.Add(4);
+        } 
     }
 }
 
